@@ -1,0 +1,24 @@
+npm i yup
+import * as yup from 'yup';
+
+Prepare schema
+let schema = yup.object().shape({
+username: // your yup validation goes here
+})
+
+Functions for validation
+1. string()
+2. number()
+3. required()
+4. email()
+5. url()
+6. min()
+7. max()
+8. positive()
+9. integer()
+
+Check validation error for certain field
+await schema.validateAt(“username”,formDataObject);
+
+Check form is valid or not
+await schema.isValid(formDataObject);
